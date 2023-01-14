@@ -674,6 +674,7 @@ body {
     align-items: center;
     background: rgba(46, 47, 66, 0.4);
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .modal {
@@ -689,7 +690,7 @@ body {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop .is-hidden .modal{
+.backdrop .is-hidden .modal {
     transform: translate(-50%, -50%) scale(0);
 }
 
@@ -702,23 +703,14 @@ body {
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
+    
+    
 }
+
 .modal-close:hover,
-.modal-close:focus{
- background-color:var(--header-logo-color);  
+.modal-close:focus {
+    background-color: var(--header-logo-color);
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 .is-hidden {
     opacity: 0;
@@ -727,6 +719,25 @@ body {
 
 }
 
+.modal-close-icon{
+    fill: #000000; 
+     position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+}
+.modal-close-icon:hover,
+.modal-close-icon:focus{
+    fill:#FFFFFF;
+}
+.modal-close:focus .modal-close-icon,
+.modal-close:active .modal-close-icon,
+.modal-close:hover .modal-close-icon{
+    fill:#FFFFFF;
+}
 /* --portfolio-- */
 
 .visually-hidden {
@@ -847,7 +858,7 @@ body {
     overflow: hidden;
 }
 
-.portfolio-two:hover .top-text{
+.portfolio-two:hover .top-text {
     transform: translateY(0);
 }
 
