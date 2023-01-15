@@ -6,6 +6,7 @@
     --team-background-color: #F4F4FD;
     --btn-background-color: #404BBF;
     --footer-after-color: #E7E9FC;
+    /* --trans: transform 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 
 
 }
@@ -151,6 +152,7 @@ body {
 .header-link {
     position: relative;
     color: var(--feature-title-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-link.current::after {
@@ -210,12 +212,14 @@ body {
     color: var(--header-contact-color);
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .header-mail:hover,
 .header-mail:focus {
     color: var(--btn-background-color);
+
 }
 
 .header-tel {
@@ -227,6 +231,7 @@ body {
     color: var(--header-contact-color);
     padding-top: 24px;
     padding-bottom: 24px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -288,7 +293,11 @@ body {
     padding: 16px 32px;
     gap: 10px;
     margin-top: 48px;
-
+    /* transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+    /* transition: box-shadow 2000ms linear,background-color 2000ms cubic-bezier(0.4, 0, 0.2, 1);*/
+    transition-property: box-shadow, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -306,6 +315,8 @@ body {
 .hero-btn:focus {
     background-color: var(--btn-background-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+
 }
 
 /* --about-- */
@@ -426,6 +437,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: 8px;
+    border-radius: 4px;
 }
 
 
@@ -487,6 +499,9 @@ body {
     border-radius: 50%;
     width: 40px;
     height: 40px;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 
 
@@ -529,9 +544,10 @@ body {
     height: 88px;
     border: 1px solid #8E8F99;
     border-radius: 4px;
-
-
-}
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
 .customers-link {
     display: flex;
@@ -541,6 +557,10 @@ body {
     width: 168px;
     height: 88px;
     fill: #8e8f99;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 
 }
 
@@ -629,7 +649,7 @@ body {
 
 .footer-link-icon:hover,
 .footer-link-icon:focus {
-    background: #31D0AA;
+    background-color: #31D0AA;
 }
 
 .footer-social {
@@ -661,6 +681,9 @@ body {
     height: 40px;
     background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* --modal */
@@ -703,8 +726,8 @@ body {
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
-    
-    
+
+
 }
 
 .modal-close:hover,
@@ -719,25 +742,28 @@ body {
 
 }
 
-.modal-close-icon{
-    fill: #000000; 
-     position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  display: inline-block;
-  width: 8px;
-  height: 8px;
+.modal-close-icon {
+    fill: #000000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    width: 8px;
+    height: 8px;
 }
+
 .modal-close-icon:hover,
-.modal-close-icon:focus{
-    fill:#FFFFFF;
+.modal-close-icon:focus {
+    fill: #FFFFFF;
 }
+
 .modal-close:focus .modal-close-icon,
 .modal-close:active .modal-close-icon,
-.modal-close:hover .modal-close-icon{
-    fill:#FFFFFF;
+.modal-close:hover .modal-close-icon {
+    fill: #FFFFFF;
 }
+
 /* --portfolio-- */
 
 .visually-hidden {
@@ -770,6 +796,10 @@ body {
 .portfolio-two {
     cursor: pointer;
     position: relative;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 
 }
 
@@ -777,6 +807,7 @@ body {
 .portfolio-two:focus {
 
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    
 }
 
 .portfolio-list {
@@ -815,16 +846,18 @@ body {
 
     border: 1px solid #E7E9FC;
     border-radius: 4px;
-
-
-
-}
+    
+    transition-property: background-color, color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
     background-color: var(--btn-background-color);
     color: var(--first-title-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
 }
 
 /* --top text */
